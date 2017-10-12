@@ -1,13 +1,11 @@
 # ItemTouchHelper
 ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
-
-#集成依赖：
 ```java  
+#集成依赖：
  Step 1.Add it in your root build.gradle at the end of repositories:
  allprojects {
-	repositories {
-			...
-			maven { url 'https://jitpack.io' }
+    repositories {	
+	        maven { url 'https://jitpack.io' }
 		}
 	}
 
@@ -21,7 +19,7 @@ ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
  ItemTouchHelperCallback callback = new ItemTouchHelperCallback(ItemTouchHelperCallback.DRAG_FLAGS_VERTICAL,adapter);
  ItemTouchHelper helper = new ItemTouchHelper(callback);
  helper.attachToRecyclerView(recylerView);
- 
+ ```
 
 #运行时图
  
