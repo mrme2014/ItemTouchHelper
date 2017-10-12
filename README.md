@@ -9,4 +9,4 @@ ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
  
  运行时图
  
-![image](https://github.com/mrme2014/PermissionHelper/raw/master/imgs/1.gif)
+![image](https://github.com/mrme2014/ItemTouchHelper/raw/master/imgs/1.gif)
