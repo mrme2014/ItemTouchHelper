@@ -2,6 +2,7 @@
 ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
 
 使用方式:
+
  ItemTouchHelperCallback callback = new ItemTouchHelperCallback(ItemTouchHelperCallback.DRAG_FLAGS_VERTICAL,adapter);
  ItemTouchHelper helper = new ItemTouchHelper(callback);
  helper.attachToRecyclerView(recylerView);
