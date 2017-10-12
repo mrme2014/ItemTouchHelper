@@ -20,5 +20,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile 'com.github.mrme2014:ItemTouchHelper:v1.0'
     compile project(':libitemtouchhelper')
 }
