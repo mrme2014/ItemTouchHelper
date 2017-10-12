@@ -4,12 +4,13 @@ ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
 
 #集成依赖：
 ```java  
+step 1.
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		maven { url 'https://jitpack.io' }
+	    }
 	}
+ step 2.
  dependencies {
 	        compile 'com.github.mrme2014:ItemTouchHelper:v1.0'
 	}
