@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="#f63f3f"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="#fed494"
+            android:gravity="center"
+            android:text="更多"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+</FrameLayout>
