@@ -6,7 +6,6 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.qiaomu.itemtouchhelper.callback.ItemTouchHelperCallback;
 import com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper;
 
 import java.util.ArrayList;

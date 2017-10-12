@@ -1,4 +1,4 @@
-package com.qiaomu.itemtouchhelper.callback;
+package com.qiaomu.itemtouchhelper;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

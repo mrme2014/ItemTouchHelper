@@ -1,9 +1,7 @@
-package com.qiaomu.itemtouchhelper.callback;
+package com.qiaomu.itemtouchhelper;
 
-import android.animation.ObjectAnimator;
 import android.graphics.Canvas;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper;
