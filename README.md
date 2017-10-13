@@ -4,7 +4,7 @@ ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
 # 集成使用方式:
 ```java
  dependencies {
-	        compile 'com.qiaomu:libitemtouchhelper:1.0.1'
+	        compile 'com.qiaomu:libitemtouchhelper:1.0.2'
 	}
 	
  ItemTouchHelperCallback callback = new ItemTouchHelperCallback(ItemTouchHelper.UP|ItemTouchHelper.DOWN,adapter);
