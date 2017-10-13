@@ -1,7 +1,7 @@
 # ItemTouchHelper
 ItemTouchHelper修改源码实现非侵入式侧滑菜单，长按拖拽
 [![](https://jitpack.io/v/mrme2014/ItemTouchHelper.svg)](https://jitpack.io/#mrme2014/ItemTouchHelper)
-
+```java
 #集成使用方式:
  dependencies {
 	        compile 'com.qiaomu:libitemtouchhelper:1.0.1'
