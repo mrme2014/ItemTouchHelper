@@ -1,4 +1,4 @@
-package com.qiaomu.itemtouchhelper.itemtouchhelper;
+package com.qiaomu.lib.itemtouchhelper;
 
 /**
  * Created by qiaomu on 2017/10/11.

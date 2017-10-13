@@ -16,10 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    //compile 'com.github.mrme2014:ItemTouchHelper:v1.0'
-    compile project(':libitemtouchhelper')
+    compile 'com.qiaomu:libitemtouchhelper:1.0.2'
+    //compile project(':libitemtouchhelper')
 }

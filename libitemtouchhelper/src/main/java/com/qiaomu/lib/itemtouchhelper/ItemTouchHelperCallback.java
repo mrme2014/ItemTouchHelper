@@ -1,13 +1,10 @@
-package com.qiaomu.itemtouchhelper;
+package com.qiaomu.lib.itemtouchhelper;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper;
-
-import static com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper.ACTION_STATE_DRAG;
-import static com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper.ACTION_STATE_SWIPE;
 
 /**
  * Created by qiaomu on 2017/10/11.
@@ -38,14 +35,21 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
     @Override
     public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
         super.onSelectedChanged(viewHolder, actionState);
-        if (actionState == ACTION_STATE_DRAG && viewHolder != null)
-            viewHolder.itemView.setAlpha(0.7f);
+        //长按拖拽时需要改变条目背景色什么的属性 请复写此方法，按照如下格式
+        //if (actionState == ItemTouchHelper.ACTION_STATE_DRAG && viewHolder != null)
+        //    viewHolder.itemView.setAlpha(0.7f);
     }
 
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-        mActionCallback.onMoved(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        mActionCallback.onMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
         return true;
+    }
+
+    @Override
+    public void onMoved(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, int fromPos, RecyclerView.ViewHolder target, int toPos, int x, int y) {
+        super.onMoved(recyclerView, viewHolder, fromPos, target, toPos, x, y);
+        mActionCallback.onMoved(fromPos, toPos);
     }
 
     @Override
@@ -56,14 +60,17 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
     @Override
     public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         super.clearView(recyclerView, viewHolder);
-        viewHolder.itemView.setAlpha(1f);
+        //在此恢复视图状态
+        //viewHolder.itemView.setAlpha(Color.parseColor("#EBEBEB"));
     }
 
     @Override
     public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-        if (actionState == ACTION_STATE_SWIPE) {
+        if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
             int translateX = mActionCallback.getMenuWidth(viewHolder);
             View contentView = mActionCallback.getContentView(viewHolder);
+            if (contentView == null)
+                return;
             if (dX < -translateX) {
                 dX = -translateX;
                 contentView.setTranslationX(dX);

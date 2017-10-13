@@ -2,16 +2,14 @@ package com.qiaomu.itemtouchhelper;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.qiaomu.itemtouchhelper.callback.ItemTouchActionCallback;
+import com.qiaomu.lib.itemtouchhelper.ItemTouchActionCallback;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -70,9 +68,14 @@ public class MessageListAdapter extends RecyclerView.Adapter<MessageListAdapter.
     }
 
     @Override
-    public void onMoved(int fromPos, int toPos) {
+    public void onMove(int fromPos, int toPos) {
         Collections.swap(mList, fromPos, toPos);
         notifyItemMoved(fromPos, toPos);
+    }
+
+    @Override
+    public void onMoved(int fromPos, int toPos) {
+       //move action finished
     }
 
     public static class MessageHolder extends RecyclerView.ViewHolder {

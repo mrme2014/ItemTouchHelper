@@ -1,12 +1,14 @@
 package com.qiaomu.itemtouchhelper;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.qiaomu.itemtouchhelper.itemtouchhelper.ItemTouchHelper;
+
+import com.qiaomu.lib.itemtouchhelper.ItemTouchHelper;
+import com.qiaomu.lib.itemtouchhelper.ItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.List;
